@@ -10,6 +10,12 @@ const app = createApp(App);
 
 import { Base64 } from "js-base64";
 
+import "ant-design-vue/dist/antd.css";
+import { Table } from "ant-design-vue";
+
+import STable from "@surely-vue/table";
+import "@surely-vue/table/dist/index.css";
+
 // const { proxy } = getCurrentInstance()
 // console.log(proxy.$httpUrl)
 
@@ -29,7 +35,7 @@ app.config.optionMergeStrategies.msg = (parent: any, child: any) => {
 };
 
 app.use(createPinia());
-app.use(router);
+app.use(router).use(Table).use(STable);
 
 app.mount("#app");
 

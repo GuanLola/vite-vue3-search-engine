@@ -23,12 +23,24 @@
         </a>
       </ul>
     </div>
+
+    <a-table
+      bordered
+      :columns="columns"
+      :data-source="data"
+      :row-selection="rowSelection"
+    >
+      <template #expandedRowRender="{ record }">
+        <p style="margin: 40px">{{ record.name }}</p>
+      </template>
+    </a-table>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { reactive, watch, ref } from "vue";
 import { useRouter } from "vue-router";
+import { Table } from "ant-design-vue";
 // const { push } = useRouter();
 const router = useRouter();
 
@@ -399,6 +411,58 @@ const hoverItem = (item) => {
 
   // console.log(a, b);
 };
+
+const columns = [
+  Table.SELECTION_COLUMN,
+  Table.EXPAND_COLUMN,
+  {
+    title: "Name",
+    dataIndex: "name",
+    // key: "name",
+  },
+  {
+    title: "Age",
+    dataIndex: "age",
+    // key: "age",
+    width: "12%",
+  },
+  {
+    title: "Address",
+    dataIndex: "address",
+    width: "30%",
+    key: "address",
+  },
+];
+const data = [
+  {
+    key: 1,
+    name: "John Brown sr.",
+    age: 60,
+    address: "New York No. 1 Lake Park",
+  },
+  {
+    key: 2,
+    name: "Joe Black",
+    age: 32,
+    address: "Sidney No. 1 Lake Park",
+  },
+];
+const rowSelection = ref({
+  // checkStrictly: false,
+  // onChange: (selectedRowKeys, selectedRows) => {
+  //   console.log(
+  //     `selectedRowKeys: ${selectedRowKeys}`,
+  //     "selectedRows: ",
+  //     selectedRows
+  //   );
+  // },
+  // onSelect: (record, selected, selectedRows) => {
+  //   console.log(record, selected, selectedRows);
+  // },
+  // onSelectAll: (selected, selectedRows, changeRows) => {
+  //   console.log(selected, selectedRows, changeRows);
+  // },
+});
 </script>
 
 <style lang="scss" scoped>
