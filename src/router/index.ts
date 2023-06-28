@@ -7,7 +7,17 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: Home,
+      component: () => import("@/views/ant/table.vue"),
+    },
+    // {
+    //   path: "/",
+    //   name: "home",
+    //   component: Home,
+    // },
+    {
+      path: "/table",
+      name: "Table",
+      component: () => import("@/views/table/index.vue"),
     },
     /* bilibili热门排行榜 */
     {

@@ -17,9 +17,9 @@ const printpdf = ref(
 );
 
 const { proxy } = getCurrentInstance();
-console.log(proxy.$Base64);
+console.log('>>>', proxy);
 
-console.log($Base64());
+console.log(window);
 
 const renderContext = ref(null);
 const pdfPagesNum = ref(0);

@@ -10,8 +10,9 @@ const app = createApp(App);
 
 import { Base64 } from "js-base64";
 
+import Antd from "ant-design-vue";
 import "ant-design-vue/dist/antd.css";
-import { Table } from "ant-design-vue";
+// import { Table } from "ant-design-vue";
 
 import STable from "@surely-vue/table";
 import "@surely-vue/table/dist/index.css";
@@ -26,17 +27,15 @@ const Base64Api = () => {
 
 window.$Base64 = Base64Api;
 
-console.log("main.ts");
-
 // 为  `msg` 定义一个合并策略函数
 app.config.optionMergeStrategies.msg = (parent: any, child: any) => {
-  console.log("parent", parent, "child", child);
+  // console.log("parent", parent, "child", child);
   return (parent || "") + (child || "");
 };
 
 app.use(createPinia());
-app.use(router).use(Table).use(STable);
+app.use(router).use(Antd).use(STable);
 
 app.mount("#app");
 
-console.log("app", app);
+// console.log("app", app);

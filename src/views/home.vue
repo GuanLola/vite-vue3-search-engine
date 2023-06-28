@@ -1,514 +1,434 @@
 <template>
-  <div class="home">
-    <div class="main">
-      <ul class="site-box-ul">
-        <li
-          v-for="(item, key) in state.siteUrl"
-          :key="key"
-          @mouseover="hoverItem(item)"
-          @click="goPage"
-        >
-          <img :src="item.src" alt="" />
-        </li>
-      </ul>
-
-      <ul class="nav">
-        <a
-          v-for="(item, key) in state.navUrl"
-          :key="key"
-          :href="item.href"
-          target="_blank"
-        >
-          <img :src="item.src" alt="" />
-        </a>
-      </ul>
+  <div class="bili-header">
+    <div class="bili-header__banner">
+      <div class="animated-banner">
+        <div class="layer">
+          <img
+            src="../static/b-1.webp"
+            data-height="150"
+            data-width="747"
+            height="600"
+            width="2988"
+            style="
+              height: 600px;
+              width: 2988px;
+              transform: translate(-600px, 0px) rotate(0deg) scale(1);
+              filter: blur(2px);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <video
+            loop
+            autoplay
+            src="../static/flower.webm"
+            playsinline=""
+            width="105"
+            height="105"
+            style="
+              object-fit: cover;
+              height: 105px;
+              width: 105px;
+              transform: translate(220.5px, 5.25px) rotate(0deg) scale(1);
+              filter: blur(2px);
+              opacity: 1;
+            "
+            data-height="300"
+            data-width="300"
+          ></video>
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-2.webp"
+            data-height="150"
+            data-width="236"
+            height="450"
+            width="708"
+            style="
+              height: 450px;
+              width: 708px;
+              transform: translate(0px, 0px) rotate(0deg) scale(1);
+              filter: blur(1px);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-3.webp"
+            data-height="708"
+            data-width="639"
+            height="177"
+            width="159"
+            style="
+              height: 177px;
+              width: 159.75px;
+              transform: translate(-312.5px, -50px) rotate(0deg) scale(1);
+              filter: blur(1px);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <video
+            loop
+            autoplay
+            src="../static/flower.webm"
+            playsinline=""
+            width="300"
+            height="300"
+            style="
+              object-fit: cover;
+              height: 300px;
+              width: 300px;
+              transform: translate(-50px, -20px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+            data-height="300"
+            data-width="300"
+          ></video>
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-4.webp"
+            data-height="1318"
+            data-width="1332"
+            height="329"
+            width="333"
+            style="
+              height: 329.5px;
+              width: 333px;
+              transform: translate(20px, -25px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-5.webp"
+            data-height="454"
+            data-width="573"
+            height="72"
+            width="91"
+            style="
+              height: 72.64px;
+              width: 91.68px;
+              transform: translate(272px, 39.84px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-6.webp"
+            data-height="371"
+            data-width="782"
+            height="103"
+            width="218"
+            style="
+              height: 103.88px;
+              width: 218.96px;
+              transform: translate(-504px, 22.4px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-7.webp"
+            data-height="286"
+            data-width="659"
+            height="77"
+            width="177"
+            style="
+              height: 77.22px;
+              width: 177.93px;
+              transform: translate(-324px, 40.5px) rotate(-3deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-8.webp"
+            data-height="503"
+            data-width="172"
+            height="251"
+            width="86"
+            style="
+              height: 251.5px;
+              width: 86px;
+              transform: translate(425px, 3px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-8.webp"
+            data-height="321"
+            data-width="210"
+            height="70"
+            width="46"
+            style="
+              height: 70.62px;
+              width: 46.2px;
+              transform: translate(297px, -33px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-9.webp"
+            data-height="635"
+            data-width="852"
+            height="165"
+            width="221"
+            style="
+              height: 165.1px;
+              width: 221.52px;
+              transform: translate(390px, -104px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-10.webp"
+            data-height="503"
+            data-width="172"
+            height="150"
+            width="51"
+            style="
+              height: 150.9px;
+              width: 51.6px;
+              transform: translate(360px, 0px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-11.webp"
+            data-height="1500"
+            data-width="5626"
+            height="450"
+            width="1687"
+            style="
+              height: 450px;
+              width: 1687.8px;
+              transform: translate(180px, 6px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-12.webp"
+            data-height="680"
+            data-width="675"
+            height="204"
+            width="202"
+            style="
+              height: 204px;
+              width: 202.5px;
+              transform: translate(90px, -12px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-12.webp"
+            data-height="680"
+            data-width="675"
+            height="204"
+            width="202"
+            style="
+              height: 204px;
+              width: 202.5px;
+              transform: translate(90px, -12px) rotate(0deg) scale(1);
+              opacity: 0;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-13.webp"
+            data-height="669"
+            data-width="287"
+            height="234"
+            width="100"
+            style="
+              height: 234.15px;
+              width: 100.45px;
+              transform: translate(-105px, 17.5px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-14.webp"
+            data-height="389"
+            data-width="296"
+            height="101"
+            width="76"
+            style="
+              height: 101.14px;
+              width: 76.96px;
+              transform: translate(63.7px, 33.8px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-15.webp"
+            data-height="1032"
+            data-width="980"
+            height="206"
+            width="196"
+            style="
+              height: 206.4px;
+              width: 196px;
+              transform: translate(-800px, 0px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-16.webp"
+            data-height="1500"
+            data-width="1428"
+            height="465"
+            width="442"
+            style="
+              height: 465px;
+              width: 442.68px;
+              transform: translate(-589px, 0px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-17.webp"
+            data-height="286"
+            data-width="659"
+            height="57"
+            width="131"
+            style="
+              height: 57.2px;
+              width: 131.8px;
+              transform: translate(-210px, -30px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-18.webp"
+            data-height="454"
+            data-width="573"
+            height="104"
+            width="131"
+            style="
+              height: 104.42px;
+              width: 131.79px;
+              transform: translate(-184px, 23px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-20.webp"
+            data-height="454"
+            data-width="573"
+            height="104"
+            width="131"
+            style="
+              height: 104.42px;
+              width: 131.79px;
+              transform: translate(-230px, 18.4px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-21.webp"
+            data-height="414"
+            data-width="826"
+            height="132"
+            width="264"
+            style="
+              height: 132.48px;
+              width: 264.32px;
+              transform: translate(-512px, 28.8px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-22.webp"
+            data-height="446"
+            data-width="652"
+            height="111"
+            width="163"
+            style="
+              height: 111.5px;
+              width: 163px;
+              transform: translate(400px, 50px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-23.webp"
+            data-height="667"
+            data-width="282"
+            height="233"
+            width="98"
+            style="
+              height: 233.45px;
+              width: 98.7px;
+              transform: translate(525px, 0px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="layer">
+          <img
+            src="../static/b-24.webp"
+            data-height="491"
+            data-width="1072"
+            height="137"
+            width="300"
+            style="
+              height: 137.48px;
+              width: 300.16px;
+              transform: translate(700px, 28px) rotate(0deg) scale(1);
+              opacity: 1;
+            "
+          />
+        </div>
+      </div>
     </div>
-
-    <a-table
-      bordered
-      :columns="columns"
-      :data-source="data"
-      :row-selection="rowSelection"
-    >
-      <template #expandedRowRender="{ record }">
-        <p style="margin: 40px">{{ record.name }}</p>
-      </template>
-    </a-table>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { reactive, watch, ref } from "vue";
-import { useRouter } from "vue-router";
-import { Table } from "ant-design-vue";
-// const { push } = useRouter();
-const router = useRouter();
+<script setup lang="ts">
+import { ref } from "vue";
 
-const username = "jack";
-
-const goPage = () => {
-  // router.push("b-popular-rank"); //
-  // router.push("/b-popular-rank"); //
-  // router.push({ path: "b-popular-rank" }); //
-  // router.push("/b-popular-rank"); //
-  // router.push({ name: "BilibiliPopularRank" }); //
-  // router.push({ name: "BilibiliPopularRank", params: { username } }); //
-  router.push({ path: "/b-popular-rank", query: { username } }); //
-
-  // router.push({ path: `/b-popular-rank/${username}` });
-};
-
-const buy = [
-  {
-    name: "tmall",
-    src: "",
-    href: "https://redirect.simba.taobao.com/rd?c=un&amp;w=bd&amp;f=https%3A%2F%2Fs.click.taobao.com%2Ft%3Funion_lens%3DlensId%253AOPT%25401615280124%25402104be69_0782_1781632b34a_ced8%254001%253BeventPageId%253A8655681%26e%3Dm%253D2%2526s%253Dv%252Bp6OF1HixccQipKwQzePCperVdZeJviePMclkcdtjxyINtkUhsv0MS6Blk41Mgmiybki%252FObwflD415GGSsrJ4YxhNUZ2i3GTlT4SLzYDiBT2M421%252BABgTvflh4%252Fhqj89CGjsatFbg%252FkxFiXT%252FI5kZuVJ2zJE2c0ACFpTaudtkEaHks2%252FfPFu3EqY%252Bakgpmw%26pid%3Dmm_131955459_43834449_111741300360&amp;k=67a22f436b17a341&amp;p=mm_131955459_43834449_111741300360",
-    title: "天猫",
-  },
-  {
-    name: "jd",
-    src: "",
-    href: "https://union-click.jd.com/jdc?e=618%7Cpc%7C&amp;p=JF8BAKwJK1olXDYDZBoCUBVIMzZNXhpXVhgcDwYNXRNHXHBTTkRHA1ocZEA-ClV_QRx8ewVdHVFiDyJUDThyYSkEF2sVXgUGVVxVCUoRM28JGloRWwQEVF1tOEsWMyRmGmsXXAcHXVZZAUsRM28PH10VXQ4KVF5VAE0nBG8BKwBAMwIKVgpbAB9DAT9bHQ8lbTYBZFldAV8RcS5aD11nbTYDZF5tVw9KXl8KGloRVDYy",
-    title: "京东",
-  },
-  {
-    name: "taobao",
-    src: "",
-    href: "http://redirect.simba.taobao.com/rd?c=un&amp;w=bd&amp;f=https%3A%2F%2Fs.click.taobao.com%2Ft%3Funion_lens%3DlensId%253AOPT%25401612256136%254021081cca_07a6_17761f44ebb_baac%254001%253BeventPageId%253A20150318020003697%26e%3Dm%253D2%2526s%253DsY41mHkxW%252BscQipKwQzePCperVdZeJviYlC4t6cuS%252FlyINtkUhsv0IMLki6Ahxm7uu5sqabOzx5D415GGSsrJ4YxhNUZ2i3GtfcNNJWtX5PKJQt1fVHsSsjNlcujFciaXu%252BSOOjatb%252FkxFiXT%252FI5kZuVJ2zJE2c0ERBlh1C2Tb%252FBV7GfGbfBR%252F2HTwXsXrhegoQaTYQ9FC3uS535%252FyVca2gfnelFNxevNc8bcJTqQrHGJe8N%252FwNpGw%253D%253D%26pid%3Dmm_131955459_43834449_111744850258&amp;k=67a22f436b17a341&amp;p=131955459_43834449_111744850258",
-    title: "淘宝网",
-  },
-  {
-    name: "suning",
-    src: "",
-    href: "https://sugs.suning.com/ukrdRpZU",
-    title: "苏宁易购",
-  },
-  {
-    name: "vip",
-    src: "",
-    href: "https://click.union.vip.com/redirect.php?code=JbiZivD",
-    title: "唯品会",
-  },
-  {
-    name: "amazon",
-    src: "",
-    href: "https://www.amazon.cn/",
-    title: "亚马逊",
-  },
-  {
-    name: "dangdang",
-    src: "",
-    href: "http://www.dangdang.com/",
-    title: "当当",
-  },
-  {
-    name: "mogu",
-    src: "",
-    href: "http://www.mogujie.com/",
-    title: "蘑菇街",
-  },
-];
-
-const state = reactive({
-  siteUrl: [
-    {
-      name: "buy",
-      src: "",
-    },
-    {
-      name: "news",
-      src: "",
-    },
-    {
-      name: "forum",
-      src: "",
-    },
-    {
-      name: "tool",
-      src: "",
-    },
-    {
-      name: "favorites",
-      src: "",
-    },
-  ],
-  navUrl: [],
-  type: "buy",
-});
-
-state.navUrl = buy;
-
-const getAssetsImages = (type: string, name: string) => {
-  switch (type) {
-    case "site":
-      return new URL(`../assets/images/global/${name}.png`, import.meta.url)
-        .href;
-    case type:
-      return new URL(
-        `../assets/images/global/${type}/${name}.png`,
-        import.meta.url
-      ).href;
-    default:
-      return "";
-  }
-};
-
-state.siteUrl.map((v) => {
-  v.src = getAssetsImages("site", v.name);
-});
-
-const getNavImages = () => {
-  state.navUrl.map((v) => {
-    v.src = getAssetsImages(state.type, v.name);
-  });
-};
-
-getNavImages();
-
-watch(
-  () => state.navUrl,
-  (n, o, callback) => {
-    if (n !== o) {
-      getNavImages();
-    }
-  },
-  { deep: true }
-);
-
-const a = ref(true);
-const b = ref("");
-
-watch(
-  () => [a.value, b.value],
-  (newValue, oldvalue) => {
-    // console.log(newValue[0], newValue[1]);
-    // console.log(oldvalue[0], oldvalue[1]);
-  }
-);
-
-const hoverItem = (item) => {
-  let arr = [];
-  switch (item.name) {
-    case "buy": {
-      arr = buy;
-      break;
-    }
-    case "news": {
-      arr = [
-        {
-          name: "qq",
-          src: "",
-          href: "http://news.qq.com/",
-          title: "腾讯新闻",
-        },
-        {
-          name: "ifeng",
-          src: "",
-          href: "http://news.ifeng.com/",
-          title: "凤凰资讯",
-        },
-        {
-          name: "sohu",
-          src: "",
-          href: "http://news.sohu.com/",
-          title: "搜狐新闻",
-        },
-        {
-          name: "163",
-          src: "",
-          href: "http://news.163.com/",
-          title: "网易新闻",
-        },
-        {
-          name: "thepaper",
-          src: "",
-          href: "http://www.thepaper.cn/",
-          title: "澎湃新闻",
-        },
-        {
-          name: "sina",
-          src: "",
-          href: "http://news.sina.com.cn/",
-          title: "新浪新闻",
-        },
-        {
-          name: "huanqiu",
-          src: "",
-          href: "http://www.huanqiu.com/",
-          title: "环球时报",
-        },
-        {
-          name: "guokr",
-          src: "",
-          href: "http://www.guokr.com/",
-          title: "果壳网",
-        },
-      ];
-      break;
-    }
-    case "forum": {
-      arr = [
-        {
-          name: "weibo",
-          src: "",
-          href: "https://weibo.com/",
-          title: "新浪微博",
-        },
-        { name: "tqq", src: "", href: "http://t.qq.com/", title: "腾讯微博" },
-        { name: "wx", src: "", href: "https://wx.qq.com/", title: "网页微信" },
-        {
-          name: "tieba",
-          src: "",
-          href: "https://tieba.baidu.com/index.html",
-          title: "百度贴吧",
-        },
-        {
-          name: "douban",
-          src: "",
-          href: "https://www.douban.com/",
-          title: "豆瓣",
-        },
-        {
-          name: "tianya",
-          src: "",
-          href: "http://bbs.tianya.cn/",
-          title: "天涯论坛",
-        },
-        {
-          name: "zcool",
-          src: "",
-          href: "http://www.zcool.com.cn/",
-          title: "站酷",
-        },
-        {
-          name: "zhihu",
-          src: "",
-          href: "http://www.zhihu.com/",
-          title: "知乎",
-        },
-      ];
-      break;
-    }
-    case "tool": {
-      arr = [
-        {
-          name: "weather",
-          src: "",
-          href: "http://www.weather.com.cn/",
-          title: "天气",
-        },
-        {
-          name: "day",
-          src: "",
-          href: "http://qq.ip138.com/day/",
-          title: "日历",
-        },
-        {
-          name: "jsq",
-          src: "",
-          href: "http://www.zxjsq.net/",
-          title: "计算器",
-        },
-        {
-          name: "baidufanyi",
-          src: "",
-          href: "http://fanyi.baidu.com/",
-          title: "百度翻译",
-        },
-        {
-          name: "googletranslate",
-          src: "",
-          href: "https://translate.google.cn/",
-          title: "谷歌翻译",
-        },
-        {
-          name: "baidumap",
-          src: "",
-          href: "http://map.baidu.com/",
-          title: "百度地图",
-        },
-        {
-          name: "kuaidi100",
-          src: "",
-          href: "http://www.kuaidi100.com/",
-          title: "快递100",
-        },
-        {
-          name: "12306",
-          src: "",
-          href: "http://www.12306.cn/mormhweb/",
-          title: "12306",
-        },
-      ];
-      break;
-    }
-    case "favorites": {
-      arr = [
-        {
-          name: "vqq",
-          src: "",
-          href: "https://v.qq.com/index.html",
-          title: "腾讯视频",
-        },
-        {
-          name: "iqiyi",
-          src: "",
-          href: "http://www.iqiyi.com/",
-          title: "爱奇艺视频",
-        },
-        {
-          name: "mgtv",
-          src: "",
-          href: "http://www.mgtv.com/",
-          title: "芒果TV",
-        },
-        {
-          name: "douyu",
-          src: "",
-          href: "https://www.douyu.com/",
-          title: "斗鱼直播",
-        },
-        {
-          name: "duowan",
-          src: "",
-          href: "http://tu.duowan.com/m/bxgif",
-          title: "多玩gif",
-        },
-        {
-          name: "bilibili",
-          src: "",
-          href: "https://www.bilibili.com/",
-          title: "哔哩哔哩",
-        },
-        {
-          name: "qqmail",
-          src: "",
-          href: "https://mail.qq.com/",
-          title: "QQ邮箱",
-        },
-        {
-          name: "music163",
-          src: "",
-          href: "http://music.163.com/",
-          title: "网易云音乐",
-        },
-      ];
-      break;
-    }
-    default: {
-      break;
-    }
-  }
-  state.type = item.name;
-  state.navUrl = arr.map((ov) => ({
-    name: ov.name,
-    src: "",
-    href: ov.href,
-  }));
-
-  a.value = !a.value;
-  b.value = item.name;
-
-  // console.log(a, b);
-};
-
-const columns = [
-  Table.SELECTION_COLUMN,
-  Table.EXPAND_COLUMN,
-  {
-    title: "Name",
-    dataIndex: "name",
-    // key: "name",
-  },
-  {
-    title: "Age",
-    dataIndex: "age",
-    // key: "age",
-    width: "12%",
-  },
-  {
-    title: "Address",
-    dataIndex: "address",
-    width: "30%",
-    key: "address",
-  },
-];
-const data = [
-  {
-    key: 1,
-    name: "John Brown sr.",
-    age: 60,
-    address: "New York No. 1 Lake Park",
-  },
-  {
-    key: 2,
-    name: "Joe Black",
-    age: 32,
-    address: "Sidney No. 1 Lake Park",
-  },
-];
-const rowSelection = ref({
-  // checkStrictly: false,
-  // onChange: (selectedRowKeys, selectedRows) => {
-  //   console.log(
-  //     `selectedRowKeys: ${selectedRowKeys}`,
-  //     "selectedRows: ",
-  //     selectedRows
-  //   );
-  // },
-  // onSelect: (record, selected, selectedRows) => {
-  //   console.log(record, selected, selectedRows);
-  // },
-  // onSelectAll: (selected, selectedRows, changeRows) => {
-  //   console.log(selected, selectedRows, changeRows);
-  // },
-});
+const layerX = ref(0);
 </script>
-
 <style lang="scss" scoped>
-.home {
-  width: 100%;
-  height: 100%;
-  background-image: url("../assets/images/global/bg.png");
-
-  .main {
-    width: 100%;
-    height: 100%;
-  }
-
-  .site-box-ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 30vh;
-
-    li {
-      cursor: pointer;
-      margin: 0 22px;
-    }
-    li:hover img {
-      transform: rotate(360deg);
-    }
-    img {
-      transition: all 0.5s ease-in-out;
-    }
-  }
-
-  .nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-
-    a {
-      display: block;
-      width: 30px;
-      height: 30px;
-      border-radius: 15px;
-      background-repeat: no-repeat;
-      cursor: pointer;
-      margin: 0 15px;
-      box-shadow: 0 14px 24px rgba(0, 0, 0, 0.2);
-    }
-  }
-}
+@import url(./home.scss);
 </style>
